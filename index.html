@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="painel">
+        <h1>Inserir</h1>
+        <!--&#x1F4C4-->
+        <form action="" id="formulario">
+            <!--<label for="inputPdf" class="file-label">📤 Escolher PDFs</label>
+            <input type="file" id="inputPdf" accept=".pdf" multiple>
+            -->
+            <button type="button" id="selecionarArquivo" class="upload-button" >📂 Carregar PDFs</button>
+            
+              <div class="file-list" id="msg">Nenhum arquivo selecionado </div>
+              <div class="subBox">
+                  
+              </div>
+              
+              <button type="button" id="process-buttons" class="process-button" > ⚙️ Processar Documentos</button>
+                
+            
+              </div>
+                       
+                      
+            
+        </form>
+    </div>
+    
+
+    <script src="renderer.js"></script>
+    
+  </body>
+</html>

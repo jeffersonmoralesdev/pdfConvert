@@ -1,0 +1,308 @@
+/*@font-face {
+    font-family: 'Inter';
+    src: url('./font/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./font/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(179, 176, 176);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+
+.painel {
+    background-color: rgb(137, 139, 139);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.painel > h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(252, 250, 250);
+    margin-bottom: 20px;
+}
+
+#formulario {
+    background-color: rgb(179, 179, 189);
+    width: 700px;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*#inputPdf {
+    display: none; /* Esconde o input padrão */
+    /*
+}*/
+
+
+
+/*
+button
+.file-label {
+    display: inline-block;
+    background-color: #0056b3;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.file-label:hover {
+    background-color: #003d82;
+}
+*/
+/*
+.file-list {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    max-height: 100px;
+    overflow-y: auto;
+    width: 100%;
+}
+.subBox{
+    margin: auto auto;  
+    border-radius: 10px;
+    padding: 20px 15px 20px 15px;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 10px;
+    border: solid 2px black;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    margin: 3px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 200px;
+   
+}
+/*.item span {
+    flex-grow: 1; /* O texto ocupará o espaço disponível *//*
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}*/
+/*
+.remove-button {
+    background-color: rgba(255, 255, 255, 0.479);
+    color: red;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 8px;
+    border-radius: 5px;
+    margin-left:10px ;
+
+   
+}
+
+#selected{
+    /*background-color: #218838;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 250px;
+    padding: 10px;
+*//*
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria duas colunas de tamanho igual *//*
+    gap: 5px; /* Espaçamento entre os itens *//*
+    max-height: 250px; /* Define a altura máxima *//*
+    padding: 10px;
+    overflow-y: auto; /* Adiciona rolagem caso necessário *//*
+    overflow-x: hidden; /* Evita rolagem horizontal *//*
+}
+
+.upload-button {
+    background-color: #218838;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.upload-button:hover {
+    background-color: #16652a;
+}
+
+#box{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 80%;
+}
+*/
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./font/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./font/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(179, 176, 176);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+
+.painel {
+    background-color: rgb(137, 139, 139);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.painel > h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(252, 250, 250);
+    margin-bottom: 20px;
+}
+
+#formulario {
+    background-color: rgb(179, 179, 189);
+    width: 700px;
+    max-height: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-list {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    max-height: 100px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.subBox {
+    margin: auto auto;
+    border-radius: 10px;
+    padding: 20px 15px 20px 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 10px;
+   
+    max-height: 250px; /* altura maxima para scroll */
+    overflow-y: auto; /* scroll caso necessário */
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    margin: 3px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 300px; /* Largura fixa */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa */
+    text-overflow: ellipsis; /* Adiciona "..." ao final do texto truncado */
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+.item span {
+    flex-grow: 1; /* Permite que o texto cresça e ocupe o espaço disponível */
+    max-width: 200px; /* Largura máxima para o texto */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.remove-button {
+    background-color: rgba(255, 255, 255, 0.479);
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+    border-radius: 15% 15%;
+}
+
+.upload-button {
+    background-color: #218838;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.process-button{
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.upload-button:hover {
+    background-color: #16652a;
+}
+.process-button:hover{
+    background-color:#003d82;
+}
