@@ -31,7 +31,7 @@ class NotaFiscal {
               irrf: null,
               outros: null,
               total_custos: null,
-              liquido_para: null,
+              liquido: null,
             }
         };
     }
@@ -39,7 +39,27 @@ class NotaFiscal {
     adicionarTransacao(transacao) {
         this.#transacoes.push(transacao);
     }
+    atualizarResumoFinanceiro(campo, valor, secao) {
+        if(this.#resumoFinanceiro[secao] && this.#resumoFinanceiro[secao].hasOwnProperty(campo)){
+            this.#resumoFinanceiro[secao][campo] = parseFloat(valor);
+        }else{
+            console.error(`Campo ${campo} não encontrado na seção ${secao}`);
+        }
+    }
+
+    toJSON() {
+      return {
+          numero: this.#numero,
+          dataEmissao: this.#dataEmissao,
+          folha: this.#folha,
+          transacoes: this.#transacoes,
+          resumoFinanceiro: this.#resumoFinanceiro
+      };
+  }
+  
 
 }
+
+
 
 module.exports = NotaFiscal;
