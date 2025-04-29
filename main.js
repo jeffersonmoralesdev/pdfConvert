@@ -38,9 +38,6 @@ app.on('window-all-closed', () => {
 let caminho = app.getPath('documents').replace(/\\/g, '\\\\')
 console.log("caca",caminho)
 
-//caminho = caminho.replace(/\\/g, '\\\\'); // Substitui as barras invertidas por barras normais
-
-//console.log("caminho", newCaminho)
 const template=[
     {
         label:'Arquivo',
@@ -57,15 +54,7 @@ const template=[
                         caminho = result.filePaths[0] 
                         
                         console.log(`Pasta selecionada: ${caminho}`);
-                        // Exemplo: Criar o arquivo na pasta selecionada
-                        //const conteudo = "Dados extraídos do PDF...";
-                        //const filePath = path.join(selectedFolder, 'dados.txt');
-                        /*try {
-                            fs.writeFileSync(filePath, conteudo, 'utf-8');
-                            console.log(`Arquivo salvo em: ${filePath}`);
-                        } catch (err) {
-                            console.error('Erro ao criar o arquivo:', err);
-                        }*/
+                       
                     }
                 }
             }, 
@@ -85,9 +74,6 @@ const template=[
         label:'Ajuda'
     }
 ]
-
-
-
 
 
 
@@ -131,9 +117,10 @@ ipcMain.handle('process-pdf', async (_, filePath) => {
         console.log('Nenhum arquivo selecionado.');
         return;
     }
-
+    
     for( const nota of filePath ){
-        await NotaService.extrairDadosNota(nota)
+       
+        await NotaService.extrairDadosNota(nota,caminho)
     }
 });
 

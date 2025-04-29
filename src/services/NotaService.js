@@ -1,9 +1,11 @@
 const PDFParser = require("pdf2json");
 const NotaFiscal = require("../models/NotaFiscal");
+const ExcellReportService = require("../services/ExcellReportService");
 
 class NotaService {
    
-    static async extrairDadosNota(nota) {
+    static async extrairDadosNota(nota,caminho) {
+       
         return new Promise((resolve, reject) => {
 
             const pdfParser = new PDFParser(this, 1);
@@ -14,7 +16,7 @@ class NotaService {
                 let conteudo = pdfParser.getRawTextContent()
                 if(conteudo){
                     try {
-                        this.tratarDadosExtraidos(conteudo)
+                        this.tratarDadosExtraidos(conteudo, nota.name, caminho)
                         resolve();
                     } catch (error) {
                         reject(error);
@@ -118,7 +120,7 @@ class NotaService {
 
     }
 
-    static async tratarDadosExtraidos(conteudo) {
+    static async tratarDadosExtraidos(conteudo,name, caminho) {
         let listaNotas=[];
         
         let nota = null;
@@ -196,7 +198,11 @@ class NotaService {
                 }
 
                 index++
-            }
+            }  
+        }
+        if(listaNotas.length > 0){
+            const excellReportService = new ExcellReportService(name);
+            excellReportService.criarDocXlxs(listaNotas,name,caminho);
         }
     }
 
